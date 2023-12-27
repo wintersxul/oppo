@@ -1,0 +1,9 @@
+﻿  UnitTests.cpp
+D:\proga\C++\prak3\Project1\Project1\Point.cpp(29,30): warning C4101: 'exc': unreferenced local variable
+  (compiling source file '/UnitTests.cpp')
+  
+D:\proga\C++\prak3\Project1\Project1\Point.cpp(60,30): warning C4101: 'exc': unreferenced local variable
+  (compiling source file '/UnitTests.cpp')
+  
+     Creating library D:\proga\C++\prak3\Project1\x64\Debug\UnitTests.lib and object D:\proga\C++\prak3\Project1\x64\Debug\UnitTests.exp
+  UnitTests.vcxproj -> D:\proga\C++\prak3\Project1\x64\Debug\UnitTests.dll

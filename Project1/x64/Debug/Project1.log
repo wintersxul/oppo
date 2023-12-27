@@ -1,0 +1,4 @@
+﻿  Point.cpp
+D:\proga\C++\prak3\Project1\Project1\Point.cpp(29,30): warning C4101: 'exc': unreferenced local variable
+D:\proga\C++\prak3\Project1\Project1\Point.cpp(60,30): warning C4101: 'exc': unreferenced local variable
+  Project1.vcxproj -> D:\proga\C++\prak3\Project1\x64\Debug\Project1.exe
