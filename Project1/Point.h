@@ -1,5 +1,5 @@
 #pragma once
-#include "Fields.h"
+#include "ColorsnCords.h"
 #include "Validator.h"
 #include <fstream>
 #include <iostream>
@@ -16,10 +16,8 @@ class Point {
 	void DeletePoint(const size_t pos);
 	void DeletePoints();
  private:
-	std::vector<Fields> data_;
+	std::vector<CordsnColors> data_;
   Validator validator_;
-	const std::string compare(const Color color) const;
-	const Color compare(const std::string color) const;
-	Fields make_fields(const std::vector<std::string>& vector) const;
+	CordsnColors MakeCC(const std::vector<std::string>& vector) const;
 };
 
