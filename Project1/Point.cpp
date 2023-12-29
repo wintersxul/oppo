@@ -1,22 +1,8 @@
 #include "Point.h"
 
-const std::string Point::compare(const Color color) const {
-	if (color == red) { return "red"; }
-	if (color == blue) { return "blue"; }
-	if (color == green) { return "green"; }
-	return std::string();
-}
-
-const Color Point::compare(const std::string color) const {
-	if (color == "red") { return red; }
-	if (color == "blue") { return blue; }
-	if (color == "green") { return green; }
-	return white;
-}
-
 void Point::SetPoint(const std::string& string) {
 	if (validator_.match(string)) {
-		Fields field = make_fields(validator_.split(string, ' '));
+		CordsnColors field = MakeCC(validator_.split(string, ' '));
 		if (std::find(data_.begin(), data_.end(), field) == data_.end())
 			data_.emplace_back(field);
 	}
@@ -56,17 +42,17 @@ void Point::PrintPoint(const size_t pos,
 	try {
 		auto to_find = data_.at(pos);
 		out << to_find.x << " " << to_find.y << " ";
-		out << compare(to_find.color) << "\n";
+		out << CordsnColors::compare(to_find.color) << "\n";
 	} catch (std::out_of_range& exc) {
 		out << "failed to find an element\n\n";
 	}
 }
 
-Fields Point::make_fields(
+CordsnColors Point::MakeCC(
 		const std::vector<std::string>& vector) const {
-	Fields fields;
+	CordsnColors fields;
 	fields.x = stof(vector[0]);
 	fields.y = stof(vector[1]);
-	fields.color = compare(vector[2]);
+	fields.color = CordsnColors::compare(vector[2]);
 	return fields;
 }
